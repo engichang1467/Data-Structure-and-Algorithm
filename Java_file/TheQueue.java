@@ -98,7 +98,6 @@ public class TheQueue {
         System.out.println();
 
         // Number of spaces to put before the F
-
         int spaceBeforeFront = 3*(2*(front+1)-1);
 
         for(int k = 1; k < spaceBeforeFront; k++){
@@ -108,7 +107,6 @@ public class TheQueue {
         System.out.print("F");
 
         // Number of spaces to put before the R
-
         int spaceBeforeRear = (2*(3*rear)-1) - (spaceBeforeFront);
 
         for (int l = 0; l < spaceBeforeRear; l++){
@@ -146,8 +144,6 @@ public class TheQueue {
             numberOfItems++;
         }
     }
-
-
 
     public static void main(String[] args){
 
