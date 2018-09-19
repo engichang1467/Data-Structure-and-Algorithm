@@ -142,7 +142,6 @@ public class TheStack {
 
         theStack.displayTheStack();
 
-
     }
 
 }
