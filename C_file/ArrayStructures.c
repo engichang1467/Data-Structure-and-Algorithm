@@ -98,7 +98,6 @@ char linearSearchForValue(int value)
 
 int main() 
 {
-
 	generateRandomArray();
 	printArray();
 
