@@ -73,10 +73,11 @@ void insertValue(int value)
 }
 
 // Linear Search
+const char* NONE = "NONE"
 char linearSearchForValue(int value)
 {
 	bool valueInArray = false;
-	char indexWithValue;
+	const char* indexWithValue = NULL;
 	printf("The Value was Found in the Following: ");
 
 	for (int i = 0; i < arraySize; i++)
@@ -90,7 +91,8 @@ char linearSearchForValue(int value)
 
 	if(!valueInArray)
 	{
-		printf("None");
+		indexWithValue = NONE; 
+		printf("%s \n", indexWithValue);
 	}
 	printf("\n");
 	return indexWithValue;
