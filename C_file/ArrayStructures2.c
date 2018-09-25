@@ -15,7 +15,8 @@ void generateRandomArray()
 }
 
 const char* NONE = "NONE";
-char linearSearchForValue(int value){
+char linearSearchForValue(int value)
+{
 	bool valueInArray = false;
 	//const char* indexWithValue = NULL;
 	const char* indexWithValue[6] = {};
