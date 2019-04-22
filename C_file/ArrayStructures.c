@@ -1,19 +1,34 @@
+/*
+ * ArrayStructure.c
+ *
+ * Class Description: Array ADT
+ *
+ * Author: Michael Chang
+ * Date:   April 20.2019
+ * 
+ * 
+ * 
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
 #include <string.h>
 
+// Desc: declare an empty array and its size
 int theArray[50] = {};
 int arraySize = 10;
 
+
+// Desc: it generates a random array
 void generateRandomArray()
 {
-	for (int i = 0; i < arraySize; i++){
-		theArray[i] = rand() % 50;  // the numbers from rand() are big
-	}	
+	for (int i = 0; i < arraySize; i++)
+		theArray[i] = rand() % 50;  // the numbers from rand() are big	
 }
 
-// Print my array
+
+// Desc: Print the array
 void printArray() 
 {
 	printf("----------\n");
@@ -27,16 +42,16 @@ void printArray()
 	}
 }
 
-// How to get our value from the index?
+// Desc: it gets our value from the index
 int getValueAtIndex(int index) 
 {
 	if(index < arraySize)
 		printf("%d\n", theArray[index]);
-
 	return 0;
 }
 
-// To find out if an array contains a value
+
+// Desc: To find out if an array contains a value
 bool doesArrayContainThisValue(int searchValue) 
 {
 	bool valueInArray = false;
@@ -49,20 +64,19 @@ bool doesArrayContainThisValue(int searchValue)
 	return valueInArray;
 }
 
-// Deleting index and then moving all the other values up
+
+// Desc: Deleting index and then moving all the other values up
 void deleteIndex(int index) 
 {
 	if(index < arraySize)
 	{
 		for (int i = index; i < (arraySize - 1); i++)
-		{
 			theArray[i] = theArray[i+1];
-		}
 		arraySize--;
 	}
 }
 
-// How to insert a value?
+// Desc: insert the value
 void insertValue(int value)
 {
 	if(arraySize < 50)
@@ -73,8 +87,8 @@ void insertValue(int value)
 }
 
 // Linear Search
-const char* NONE = "NONE"
-char linearSearchForValue(int value)
+const char* NONE = "NONE";
+void linearSearchForValue(int value)
 {
 	bool valueInArray = false;
 	const char* indexWithValue = NULL;
@@ -91,11 +105,10 @@ char linearSearchForValue(int value)
 
 	if(!valueInArray)
 	{
-		indexWithValue = NONE; 
+		indexWithValue = "NONE"; 
 		printf("%s \n", indexWithValue);
 	}
 	printf("\n");
-	return indexWithValue;
 }
 
 int main() 
@@ -112,7 +125,8 @@ int main()
 	insertValue(17);
 	printArray();
 
-	printf("%c\n", linearSearchForValue(36));
+	// printf("%c\n", linearSearchForValue(36));
+	linearSearchForValue(36);
 
 	return 0;
 }
